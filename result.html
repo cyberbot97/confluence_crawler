@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html>
+<head>
+            <title>검색백엔드개발팀 Home - 검색백엔드개발팀 - Confluence</title>
+    
+        
+
+                        
+    
+                        
+    
+
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE,chrome=IE7">
+<meta charset="UTF-8">
+<!-- Deprecated since 3.4. To be removed in a future version of Confluence; use AJS.Confluence.getContextPath() -->
+<meta id="confluence-context-path" name="confluence-context-path" content="">
+<meta id="confluence-base-url" name="confluence-base-url" content="http://localhost:8090">
+
+<meta id="atlassian-token" name="atlassian-token" content="703a8f45a827737f5a2d09db257503b4a0e2abaf">
+
+<meta id="confluence-space-key" name="confluence-space-key" content="SEARCHBACKEND">
+<script type="text/javascript">
+    // Deprecated global variables. To be removed in a future version of Confluence.
+    var contextPath = '';
+</script>
+
+    
+
+<!-- include system css resources -->
+
+
+    <!--[if lt IE 9]>
+<link data-atlassian-webresource-contents="confluence.web.resources:userlink[1.0],confluence.web.resources:master-styles[1.0],com.atlassian.auiplugin:ajs-gadgets-base[3.6.5],confluence.web.resources:page-ordering-tree[1.0],confluence.web.resources:aui-forms[1.0],com.atlassian.auiplugin:ajs[3.6.5],confluence.web.resources:icons[1.0],confluence.macros.profile:profile-macro-styles[1.0],confluence.web.resources:page-permissions-editor[1.0]" type="text/css" rel="stylesheet" href="/s/en_GB/3398/84f448c1067609161db7eeaf020f96b084eef29d.1/3/_/download/superbatch/css/batch.css?conditionalComment=lt+IE+9" media="all">
+<![endif]-->
+<link data-atlassian-webresource-contents="confluence.web.resources:print-styles[1.0],confluence.macros.advanced:get-more[2.1.2]" type="text/css" rel="stylesheet" href="/s/en_GB/3398/84f448c1067609161db7eeaf020f96b084eef29d.1/3/_/download/superbatch/css/batch.css?media=print" media="print">
+<link data-atlassian-webresource-contents="confluence.web.resources:master-styles[1.0],confluence.web.resources:fancy-box[1.0],confluence.web.resources:content-styles[1.0],confluence.web.resources:page-move-resources[1.0],confluence.macros.advanced:get-more[2.1.2],confluence.web.resources:labels-editor[1.0],confluence.web.components:core[1.0],com.atlassian.auiplugin:ajs[3.6.5],com.atlassian.auiplugin:ajs-html5shim[3.6.5],confluence.macros.profile:network-resources-css[1.0],confluence.macros.profile:profile-macro-styles[1.0],confluence.web.resources:create-space[1.0],confluence.web.resources:panel-styles[1.0],com.atlassian.plugins.shortcuts.atlassian-shortcuts-module:shortcuts[1.0],com.atlassian.confluence.keyboardshortcuts:confluence-keyboard-shortcuts[4.3.7],confluence.web.resources:userlink[1.0],confluence.web.resources:view-content[1.0],confluence.web.resources:search-results-grid[1.0],confluence.web.resources:aui-forms[1.0],com.atlassian.confluence.plugins.gadgets:css[4.3.7],confluence.content.action.menu:linkpopup-resources[1.0],com.atlassian.auiplugin:ajs-gadgets-base[3.6.5],confluence.userstatus:userstatus-resources[1.0],confluence.web.resources:page-ordering-tree[1.0],confluence.web.resources:jquery-autocomplete[1.0],confluence.web.components:property-panel-css[1.0],confluence.web.resources:tooltip[1.0],com.atlassian.confluence.whatsnew:whats-new-resources[4.3.7],confluence.web.resources:ajs[1.0],confluence.macros.advanced:recently-updated-sidebar-resources[2.1.2],confluence.web.resources:icons[1.0],confluence.web.resources:dashboard-resources[1.0],confluence.web.resources:page-permissions-editor[1.0]" type="text/css" rel="stylesheet" href="/s/en_GB/3398/84f448c1067609161db7eeaf020f96b084eef29d.1/3/_/download/superbatch/css/batch.css" media="all">
+<!--[if lte IE 9]>
+<link data-atlassian-webresource-contents="com.atlassian.auiplugin:ajs[3.6.5]" type="text/css" rel="stylesheet" href="/s/en_GB/3398/84f448c1067609161db7eeaf020f96b084eef29d.1/3/_/download/superbatch/css/batch.css?conditionalComment=lte+IE+9" media="all">
+<![endif]-->
+<!--[if IE 9]>
+<link data-atlassian-webresource-contents="com.atlassian.auiplugin:ajs-gadgets-base[3.6.5]" type="text/css" rel="stylesheet" href="/s/en_GB/3398/84f448c1067609161db7eeaf020f96b084eef29d.1/3/_/download/superbatch/css/batch.css?conditionalComment=IE+9" media="all">
+<![endif]-->
+<link data-atlassian-webresource-contents="com.atlassian.confluence.plugins.view-storage-format:view-storage-menu-resources[4.3.7],com.atlassian.confluence.plugins.view-source:view-source-menu-resources[4.3.7],confluence.macros.core:flash-autosize[4.3.7],com.atlassian.confluence.plugins.share-page:mail-page-resources[1.26]" data-atlassian-webresource-contexts="page" type="text/css" rel="stylesheet" href="/s/en_GB/3398/84f448c1067609161db7eeaf020f96b084eef29d.1/9ec81869a580c0aa5809243fa01caab5/_/download/contextbatch/css/page/batch.css" media="all">
+<!--[if lt IE 9]>
+<link data-atlassian-webresource-contents="com.atlassian.confluence.plugins.confluence-inline-tasks:inline-tasks-resources[4.3.7],com.atlassian.confluence.plugins.jira.jira-connector:help-dialog-extension[1.4.2],com.atlassian.confluence.plugins.drag-and-drop:drag-and-drop-for-view-content[4.3.7],com.atlassian.confluence.plugins.view-storage-format:view-comment-storage-resources[4.3.7],confluence.web.resources:view-comment[1.0],com.atlassian.confluence.plugins.confluence-like:content-like-resources[4.3.7],com.atlassian.auiplugin:jquery-ui-other[3.6.5],com.atlassian.confluence.plugins.confluence-mentions-plugin:help-dialog-extension[1.5.9],com.atlassian.confluence.plugins.confluence-sortable-tables:sortable-table-resources[4.3.7],com.atlassian.confluence.plugins.drag-and-drop:support[4.3.7]" data-atlassian-webresource-contexts="viewcontent" type="text/css" rel="stylesheet" href="/s/en_GB/3398/84f448c1067609161db7eeaf020f96b084eef29d.1/bd23c5a3bc97fb00610e72d7753ce55f/_/download/contextbatch/css/viewcontent/batch.css?conditionalComment=lt+IE+9" media="all">
+<![endif]-->
+<link data-atlassian-webresource-contents="com.atlassian.confluence.plugins.confluence-inline-tasks:inline-tasks-resources[4.3.7],com.atlassian.confluence.plugins.jira.jira-connector:help-dialog-extension[1.4.2],com.atlassian.confluence.plugins.drag-and-drop:drag-and-drop-for-view-content[4.3.7],com.atlassian.confluence.plugins.view-storage-format:view-comment-storage-resources[4.3.7],confluence.web.resources:view-comment[1.0],com.atlassian.confluence.plugins.confluence-like:content-like-resources[4.3.7],com.atlassian.auiplugin:jquery-ui-other[3.6.5],com.atlassian.confluence.plugins.confluence-mentions-plugin:help-dialog-extension[1.5.9],com.atlassian.confluence.plugins.confluence-sortable-tables:sortable-table-resources[4.3.7],com.atlassian.confluence.plugins.drag-and-drop:support[4.3.7]" data-atlassian-webresource-contexts="viewcontent" type="text/css" rel="stylesheet" href="/s/en_GB/3398/84f448c1067609161db7eeaf020f96b084eef29d.1/bd23c5a3bc97fb00610e72d7753ce55f/_/download/contextbatch/css/viewcontent/batch.css" media="all">
+<link data-atlassian-webresource-contents="com.atlassian.confluence.plugins.quickcomments:quick-comment-page[4.3.7],com.atlassian.confluence.plugins.editor-loader:background-loading-editor[4.3.7],com.atlassian.confluence.plugins.quickcomments:quick-comment-initial[4.3.7]" data-atlassian-webresource-contexts="plugin.quick.comment.pre" type="text/css" rel="stylesheet" href="/s/en_GB/3398/84f448c1067609161db7eeaf020f96b084eef29d.1/1e45cf05304df6c01096dbcdef74a819/_/download/contextbatch/css/plugin.quick.comment.pre/batch.css" media="all">
+<link data-atlassian-webresource-contents="com.atlassian.confluence.plugins.confluence-inline-tasks:inline-tasks-styles[4.3.7],com.atlassian.confluence.plugins.jira.jira-connector:help-dialog-extension[1.4.2],com.atlassian.confluence.plugins.share-page:share-keyboard-shortcut-js-resources[1.26],com.atlassian.confluence.plugins.doctheme:splitter[4.3.7],com.atlassian.confluence.plugins.confluence-mentions-plugin:help-dialog-extension[1.5.9]" data-atlassian-webresource-contexts="main" type="text/css" rel="stylesheet" href="/s/en_GB/3398/84f448c1067609161db7eeaf020f96b084eef29d.1/0c7673415bf4ba1af392c487c60f03ff/_/download/contextbatch/css/main/batch.css" media="all">
+<link data-atlassian-webresource-contents="com.atlassian.mywork.mywork-confluence-host-plugin:mw-header-anchor[1.1.10]" type="text/css" rel="stylesheet" href="/s/en_GB/3398/84f448c1067609161db7eeaf020f96b084eef29d.1/1.1.10/_/download/batch/com.atlassian.mywork.mywork-confluence-host-plugin:mw-header-anchor/com.atlassian.mywork.mywork-confluence-host-plugin:mw-header-anchor.css" media="all">
+<link type="text/css" rel="stylesheet" href="/s/en_GB/3398/84f448c1067609161db7eeaf020f96b084eef29d.1/1/_/styles/colors.css?spaceKey=SEARCHBACKEND" media="all">
+<link type="text/css" rel="stylesheet" href="/s/en_GB/3398/84f448c1067609161db7eeaf020f96b084eef29d.1/1.0/_/download/resources/com.atlassian.confluence.themes.default:styles/default-theme.css" media="all">
+
+<!-- end system css resources -->
+
+    <meta name="confluence-request-time" content="1385776422407">
+<!-- Deprecated since 3.4. To be removed in a future version of Confluence; use atl.header -->
+        
+            <script type="text/x-template" title="share-content-popup">
+    <form action="#" method="post" class="aui share-content-popup">
+        <fieldset>
+            <label for="users">User name or email</label>
+            <div class="autocomplete-user-target">
+                <input class="text autocomplete-sharepage" id="users" data-max="10" data-dropdown-target=".autocomplete-user-target" data-none-message="No matching user or email found"/>
+            </div>
+            <ol class="recipients">
+            </ol>
+            <div><label for="note">Note</label></div>
+            <textarea class="textarea" id="note" placeholder="Add an optional note"/>
+        </fieldset>
+        <div class="button-panel">
+            <div class="progress-messages-icon"></div>
+            <div class="progress-messages">
+            </div>
+            <input class="button submit" type="submit" value="Share" disabled/>
+            <a class="close-dialog" href="#">Cancel</a>
+        </div>
+    </form>
+</script>
+
+<script type="text/x-template" title="share-content-popup-recipient-username">
+    <li data-username="{username}" style="display: none">
+        <span>
+            <img src="{thumbnailLink.href}" title="{title}">
+            <span>{title}</span>
+            <span class="remove-recipient"/>
+        </span>
+    </li>
+</script>
+
+<script type="text/x-template" title="share-content-popup-recipient-email">
+    <li data-email="{email}" style="display: none">
+        <span>
+            <img src="{icon}" title="{email}">
+            <span>{email}</span>
+            <span class="remove-recipient"/>
+        </span>
+    </li>
+</script>
+    
+        
+            <meta name="ajs-keyboardshortcut-hash" content="b5f4f3168915d8da3d10cdc465c297">
+            <meta name="ajs-use-keyboard-shortcuts" content="true">
+            
+    
+            
+    
+    
+            <meta name="ajs-page-id" content="786434">
+            <meta name="ajs-page-title" content="검색백엔드개발팀 Home">
+            <meta name="ajs-parent-page-id" content="">
+            <meta name="ajs-space-key" content="SEARCHBACKEND">
+            <meta name="ajs-space-name" content="검색백엔드개발팀">
+            <meta name="ajs-from-page-title" content="">
+            <meta name="ajs-browse-page-tree-mode" content="view">
+            <meta name="ajs-user-display-name" content="simon">
+            <meta name="ajs-context-path" content="">
+            <meta name="ajs-base-url" content="http://localhost:8090">
+            <meta name="ajs-version-number" content="4.3.7">
+            <meta name="ajs-build-number" content="3398">
+            <meta name="ajs-remote-user" content="admin">
+            <meta name="ajs-static-resource-url-prefix" content="/s/en_GB/3398/84f448c1067609161db7eeaf020f96b084eef29d.1/_">
+            <meta name="ajs-global-settings-attachment-max-size" content="10485760">
+            <meta name="ajs-user-locale" content="en_GB">
+            <meta name="ajs-enabled-dark-features" content="">
+            <meta name="ajs-atl-token" content="703a8f45a827737f5a2d09db257503b4a0e2abaf">
+            <meta name="ajs-confluence-flavour" content="VANILLA">
+            <meta name="ajs-editor.loader.resources" content="&lt;!--[if lt IE 9]&gt;
+&lt;link data-atlassian-webresource-excluded-contexts=&quot;viewcontent&quot; data-atlassian-webresource-contents=&quot;com.atlassian.confluence.plugins.confluence-paste:autoconvert-youtu.be-rewrite[4.3.7],com.atlassian.plugins.editor:atlassian-rte-javascript-translations[4.3.7],com.atlassian.confluence.plugins.profile-picture:profile-picture-editor_resources[1.6],confluence.web.resources:page-editor-css[1.0],com.atlassian.confluence.plugins.status-macro:editor_status[1.14],com.atlassian.applinks.applinks-plugin:applinks-util-js[3.8.0],com.atlassian.auiplugin:jquery-autocomplete[3.6.5],com.atlassian.plugins.editor:atlassian-rte-javascript-tinymce-core[4.3.7],com.atlassian.confluence.plugins.confluence-paste:autoconvert-core[4.3.7],com.atlassian.confluence.extra.officeconnector:macro-browser-smart-fields[2.1.12],com.atlassian.confluence.plugins.jira.jira-connector:proxy-js[1.4.2],com.atlassian.confluence.plugins.gadgets:macro-browser-for-gadgetsplugin[4.3.7],com.atlassian.confluence.plugins.confluence-paste:autoconvert-skitch[4.3.7],com.atlassian.gadgets.embedded:gadget-core-resources[3.2.0-m3],com.atlassian.confluence.plugins.confluence-templates:template-editor-variables-resources[4.3.7],com.atlassian.confluence.tinymceplugin:editor-resources[4.3.7],com.atlassian.confluence.plugins.confluence-paste:autoconvert-cloudapp[4.3.7],com.atlassian.confluence.plugins.confluence-mentions-plugin:editor-autocomplete-mentions-no-dependencies[1.5.9],com.atlassian.confluence.plugins.confluence-sortable-tables:ConfluenceSortableTablesEditorPlugin[4.3.7],com.atlassian.applinks.applinks-plugin:applinks-oauth-ui[3.8.0],com.atlassian.confluence.plugins.confluence-templates:template-editor-variables-template-resources[4.3.7],com.atlassian.confluence.plugins.confluence-paste:autoconvert-openphoto[4.3.7],com.atlassian.confluence.ext.newcode-macro-plugin:editor-scripts[2.0.16],confluence.web.resources:page-editor-js[1.0],com.atlassian.confluence.image.effects.ImageEffectsPlugin:propertiespanel[1.0.1],confluence.web.resources:draft-changes-js[1.0],confluence.macros.advanced:editor_includemacro[2.1.2],com.atlassian.confluence.tinymceplugin:editor-javascript-resources[4.3.7],com.atlassian.confluence.tinymceplugin:editor-autocomplete-resources-only[4.3.7],com.atlassian.confluence.plugins.confluence-paste:autoconvert-google-redirect[4.3.7],com.atlassian.confluence.tinymceplugin:editor-css-resources[4.3.7],com.atlassian.plugins.editor:atlassian-rte-javascript[4.3.7],com.atlassian.plugins.editor:atlassian-rte-css[4.3.7],confluence.web.components:editor-notifications[1.0],confluence.web.resources:jira-controls[1.0],confluence.web.resources:draft-changes[1.0],com.atlassian.confluence.plugins.drag-and-drop:drop-zone-for-image-dialog[4.3.7],com.atlassian.confluence.tinymceplugin:editor-autocomplete-resources[4.3.7],com.atlassian.plugins.editor:atlassian-rte-resources[4.3.7],com.atlassian.confluence.keyboardshortcuts:confluence-tinymce-keyboard-shortcuts[4.3.7],com.atlassian.confluence.plugins.jira.jira-connector:dialogsJs[1.4.2],com.atlassian.confluence.plugins.confluence-paste:paste-resources[4.3.7],confluence.web.resources:draft-changes-css[1.0],com.atlassian.confluence.plugins.confluence-paste:autoconvert-jira[4.3.7],confluence.web.resources:page-editor[1.0],com.atlassian.confluence.plugins.confluence-paste:autoconvert-confluence[4.3.7],com.atlassian.confluence.plugins.confluence-paste:autoconvert-widget-connector[4.3.7],confluence.extra.jira:macro-browser-resources[4.0.17],com.atlassian.confluence.plugins.confluence-paste:autoconvert-shortcut-links[4.3.7],com.atlassian.confluence.plugins.confluence-mentions-plugin:editor-autocomplete-mentions[1.5.9],com.atlassian.confluence.plugins.drag-and-drop:drag-and-drop-for-editor[4.3.7],confluence.macros.core:macro-browser-smart-fields[4.3.7],confluence.editor.actions:editor-macro-browser[1.0],com.atlassian.plugins.editor:atlassian-rte-javascript-tinymce-extensions[4.3.7],com.atlassian.confluence.extra.officeconnector:officeconnector-editor-resources[2.1.12]&quot; data-atlassian-webresource-contexts=&quot;editor,macro-browser&quot; type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;/s/en_GB/3398/84f448c1067609161db7eeaf020f96b084eef29d.1/ab0248aa72ad5eee3ae76cd029a8f6d7/_/download/contextbatch/css/editor,macro-browser,-viewcontent/batch.css?conditionalComment=lt+IE+9&quot; media=&quot;all&quot;&gt;
+&lt;![endif]--&gt;
+&lt;link data-atlassian-webresource-excluded-contexts=&quot;viewcontent&quot; data-atlassian-webresource-contents=&quot;com.atlassian.confluence.plugins.confluence-paste:autoconvert-youtu.be-rewrite[4.3.7],com.atlassian.plugins.editor:atlassian-rte-javascript-translations[4.3.7],com.atlassian.confluence.plugins.profile-picture:profile-picture-editor_resources[1.6],confluence.web.resources:page-editor-css[1.0],com.atlassian.confluence.plugins.status-macro:editor_status[1.14],com.atlassian.applinks.applinks-plugin:applinks-util-js[3.8.0],com.atlassian.auiplugin:jquery-autocomplete[3.6.5],com.atlassian.plugins.editor:atlassian-rte-javascript-tinymce-core[4.3.7],com.atlassian.confluence.plugins.confluence-paste:autoconvert-core[4.3.7],com.atlassian.confluence.extra.officeconnector:macro-browser-smart-fields[2.1.12],com.atlassian.confluence.plugins.jira.jira-connector:proxy-js[1.4.2],com.atlassian.confluence.plugins.gadgets:macro-browser-for-gadgetsplugin[4.3.7],com.atlassian.confluence.plugins.confluence-paste:autoconvert-skitch[4.3.7],com.atlassian.gadgets.embedded:gadget-core-resources[3.2.0-m3],com.atlassian.confluence.plugins.confluence-templates:template-editor-variables-resources[4.3.7],com.atlassian.confluence.tinymceplugin:editor-resources[4.3.7],com.atlassian.confluence.plugins.confluence-paste:autoconvert-cloudapp[4.3.7],com.atlassian.confluence.plugins.confluence-mentions-plugin:editor-autocomplete-mentions-no-dependencies[1.5.9],com.atlassian.confluence.plugins.confluence-sortable-tables:ConfluenceSortableTablesEditorPlugin[4.3.7],com.atlassian.applinks.applinks-plugin:applinks-oauth-ui[3.8.0],com.atlassian.confluence.plugins.confluence-templates:template-editor-variables-template-resources[4.3.7],com.atlassian.confluence.plugins.confluence-paste:autoconvert-openphoto[4.3.7],com.atlassian.confluence.ext.newcode-macro-plugin:editor-scripts[2.0.16],confluence.web.resources:page-editor-js[1.0],com.atlassian.confluence.image.effects.ImageEffectsPlugin:propertiespanel[1.0.1],confluence.web.resources:draft-changes-js[1.0],confluence.macros.advanced:editor_includemacro[2.1.2],com.atlassian.confluence.tinymceplugin:editor-javascript-resources[4.3.7],com.atlassian.confluence.tinymceplugin:editor-autocomplete-resources-only[4.3.7],com.atlassian.confluence.plugins.confluence-paste:autoconvert-google-redirect[4.3.7],com.atlassian.confluence.tinymceplugin:editor-css-resources[4.3.7],com.atlassian.plugins.editor:atlassian-rte-javascript[4.3.7],com.atlassian.plugins.editor:atlassian-rte-css[4.3.7],confluence.web.components:editor-notifications[1.0],confluence.web.resources:jira-controls[1.0],confluence.web.resources:draft-changes[1.0],com.atlassian.confluence.plugins.drag-and-drop:drop-zone-for-image-dialog[4.3.7],com.atlassian.confluence.tinymceplugin:editor-autocomplete-resources[4.3.7],com.atlassian.plugins.editor:atlassian-rte-resources[4.3.7],com.atlassian.confluence.keyboardshortcuts:confluence-tinymce-keyboard-shortcuts[4.3.7],com.atlassian.confluence.plugins.jira.jira-connector:dialogsJs[1.4.2],com.atlassian.confluence.plugins.confluence-paste:paste-resources[4.3.7],confluence.web.resources:draft-changes-css[1.0],com.atlassian.confluence.plugins.confluence-paste:autoconvert-jira[4.3.7],confluence.web.resources:page-editor[1.0],com.atlassian.confluence.plugins.confluence-paste:autoconvert-confluence[4.3.7],com.atlassian.confluence.plugins.confluence-paste:autoconvert-widget-connector[4.3.7],confluence.extra.jira:macro-browser-resources[4.0.17],com.atlassian.confluence.plugins.confluence-paste:autoconvert-shortcut-links[4.3.7],com.atlassian.confluence.plugins.confluence-mentions-plugin:editor-autocomplete-mentions[1.5.9],com.atlassian.confluence.plugins.drag-and-drop:drag-and-drop-for-editor[4.3.7],confluence.macros.core:macro-browser-smart-fields[4.3.7],confluence.editor.actions:editor-macro-browser[1.0],com.atlassian.plugins.editor:atlassian-rte-javascript-tinymce-extensions[4.3.7],com.atlassian.confluence.extra.officeconnector:officeconnector-editor-resources[2.1.12]&quot; data-atlassian-webresource-contexts=&quot;editor,macro-browser&quot; type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;/s/en_GB/3398/84f448c1067609161db7eeaf020f96b084eef29d.1/ab0248aa72ad5eee3ae76cd029a8f6d7/_/download/contextbatch/css/editor,macro-browser,-viewcontent/batch.css&quot; media=&quot;all&quot;&gt;
+&lt;script data-atlassian-webresource-excluded-contexts=&quot;viewcontent&quot; data-atlassian-webresource-contents=&quot;com.atlassian.confluence.plugins.confluence-paste:autoconvert-youtu.be-rewrite[4.3.7],com.atlassian.plugins.editor:atlassian-rte-javascript-translations[4.3.7],com.atlassian.confluence.plugins.profile-picture:profile-picture-editor_resources[1.6],confluence.web.resources:page-editor-css[1.0],com.atlassian.confluence.plugins.status-macro:editor_status[1.14],com.atlassian.applinks.applinks-plugin:applinks-util-js[3.8.0],com.atlassian.auiplugin:jquery-autocomplete[3.6.5],com.atlassian.plugins.editor:atlassian-rte-javascript-tinymce-core[4.3.7],com.atlassian.confluence.plugins.confluence-paste:autoconvert-core[4.3.7],com.atlassian.confluence.extra.officeconnector:macro-browser-smart-fields[2.1.12],com.atlassian.confluence.plugins.jira.jira-connector:proxy-js[1.4.2],com.atlassian.confluence.plugins.gadgets:macro-browser-for-gadgetsplugin[4.3.7],com.atlassian.confluence.plugins.confluence-paste:autoconvert-skitch[4.3.7],com.atlassian.gadgets.embedded:gadget-core-resources[3.2.0-m3],com.atlassian.confluence.plugins.confluence-templates:template-editor-variables-resources[4.3.7],com.atlassian.confluence.tinymceplugin:editor-resources[4.3.7],com.atlassian.confluence.plugins.confluence-paste:autoconvert-cloudapp[4.3.7],com.atlassian.confluence.plugins.confluence-mentions-plugin:editor-autocomplete-mentions-no-dependencies[1.5.9],com.atlassian.confluence.plugins.confluence-sortable-tables:ConfluenceSortableTablesEditorPlugin[4.3.7],com.atlassian.applinks.applinks-plugin:applinks-oauth-ui[3.8.0],com.atlassian.confluence.plugins.confluence-templates:template-editor-variables-template-resources[4.3.7],com.atlassian.confluence.plugins.confluence-paste:autoconvert-openphoto[4.3.7],com.atlassian.confluence.ext.newcode-macro-plugin:editor-scripts[2.0.16],confluence.web.resources:page-editor-js[1.0],com.atlassian.confluence.image.effects.ImageEffectsPlugin:propertiespanel[1.0.1],confluence.web.resources:draft-changes-js[1.0],confluence.macros.advanced:editor_includemacro[2.1.2],com.atlassian.confluence.tinymceplugin:editor-javascript-resources[4.3.7],com.atlassian.confluence.tinymceplugin:editor-autocomplete-resources-only[4.3.7],com.atlassian.confluence.plugins.confluence-paste:autoconvert-google-redirect[4.3.7],com.atlassian.confluence.tinymceplugin:editor-css-resources[4.3.7],com.atlassian.plugins.editor:atlassian-rte-javascript[4.3.7],com.atlassian.plugins.editor:atlassian-rte-css[4.3.7],confluence.web.components:editor-notifications[1.0],confluence.web.resources:jira-controls[1.0],confluence.web.resources:draft-changes[1.0],com.atlassian.confluence.plugins.drag-and-drop:drop-zone-for-image-dialog[4.3.7],com.atlassian.confluence.tinymceplugin:editor-autocomplete-resources[4.3.7],com.atlassian.plugins.editor:atlassian-rte-resources[4.3.7],com.atlassian.confluence.keyboardshortcuts:confluence-tinymce-keyboard-shortcuts[4.3.7],com.atlassian.confluence.plugins.jira.jira-connector:dialogsJs[1.4.2],com.atlassian.confluence.plugins.confluence-paste:paste-resources[4.3.7],confluence.web.resources:draft-changes-css[1.0],com.atlassian.confluence.plugins.confluence-paste:autoconvert-jira[4.3.7],confluence.web.resources:page-editor[1.0],com.atlassian.confluence.plugins.confluence-paste:autoconvert-confluence[4.3.7],com.atlassian.confluence.plugins.confluence-paste:autoconvert-widget-connector[4.3.7],confluence.extra.jira:macro-browser-resources[4.0.17],com.atlassian.confluence.plugins.confluence-paste:autoconvert-shortcut-links[4.3.7],com.atlassian.confluence.plugins.confluence-mentions-plugin:editor-autocomplete-mentions[1.5.9],com.atlassian.confluence.plugins.drag-and-drop:drag-and-drop-for-editor[4.3.7],confluence.macros.core:macro-browser-smart-fields[4.3.7],confluence.editor.actions:editor-macro-browser[1.0],com.atlassian.plugins.editor:atlassian-rte-javascript-tinymce-extensions[4.3.7],com.atlassian.confluence.extra.officeconnector:officeconnector-editor-resources[2.1.12]&quot; data-atlassian-webresource-contexts=&quot;editor,macro-browser&quot; type=&quot;text/javascript&quot; src=&quot;/s/en_GB/3398/84f448c1067609161db7eeaf020f96b084eef29d.1/ab0248aa72ad5eee3ae76cd029a8f6d7/_/download/contextbatch/js/editor,macro-browser,-viewcontent/batch.js&quot; &gt;&lt;/script&gt;
+">
+            <meta name="ajs-date.format" content="MMM dd, yyyy">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+<link rel="search" type="application/opensearchdescription+xml" href="/opensearch/osd.action" title="Confluence"/>
+
+        <!-- include system javascript resources -->
+                        
+    
+    <!--[if lt IE 9]>
+<script data-atlassian-webresource-contents="com.atlassian.auiplugin:ajs-html5shim[3.6.5]" type="text/javascript" src="/s/en_GB/3398/84f448c1067609161db7eeaf020f96b084eef29d.1/3/_/download/superbatch/js/batch.js?conditionalComment=lt+IE+9" ></script>
+<![endif]-->
+<script data-atlassian-webresource-contents="confluence.web.resources:contentnamesearch[1.0],confluence.web.resources:fancy-box[1.0],confluence.web.resources:page-move-resources[1.0],confluence.macros.advanced:get-more[2.1.2],confluence.web.resources:labels-editor[1.0],confluence.web.resources:atlassian-effects[1.0],confluence.web.components:core[1.0],com.atlassian.auiplugin:ajs[3.6.5],confluence.aui.staging:storage-manager[4.3.7],confluence.web.resources:safe-ajax[1.0],confluence.aui.staging:dark-features[4.3.7],confluence.macros.profile:profile-macro-styles[1.0],com.atlassian.auiplugin:jquery-compatibility[3.6.5],confluence.web.resources:animation[1.0],confluence.web.resources:create-personal-space[1.0],com.atlassian.soy.soy-template-plugin:soy-deps[1.1.5],confluence.macros.advanced:get-more-helper[2.1.2],confluence.web.resources:create-space[1.0],com.atlassian.plugins.shortcuts.atlassian-shortcuts-module:shortcuts[1.0],com.atlassian.confluence.keyboardshortcuts:confluence-keyboard-shortcuts[4.3.7],com.atlassian.confluence.restplugin:confluence-rest[4.3.7],confluence.web.resources:userlink[1.0],com.atlassian.confluence.extra.officeconnector:editinoffice[2.1.12],confluence.web.resources:keygen[1.0],confluence.web.resources:view-content[1.0],confluence.web.components:property-panel-js[1.0],confluence.web.resources:search-results-grid[1.0],com.atlassian.auiplugin:jquery-lib[3.6.5],confluence.web.resources:jquery-json[1.0],confluence.web.resources:raphael[1.0],confluence.content.action.menu:linkpopup-resources[1.0],com.atlassian.confluence.plugins.gadgets:gadget-directory-resources[4.3.7],com.atlassian.auiplugin:ajs-gadgets-base[3.6.5],confluence.userstatus:userstatus-resources[1.0],confluence.web.resources:page-ordering-tree[1.0],confluence.web.resources:master-scripts[1.0],confluence.web.resources:breadcrumbs[1.0],confluence.web.resources:tooltip[1.0],com.atlassian.confluence.whatsnew:whats-new-resources[4.3.7],confluence.web.resources:ajs[1.0],confluence.aui.staging:meta[4.3.7],com.atlassian.auiplugin:aui-core[3.6.5],confluence.web.resources:page-permissions-editor[1.0]" type="text/javascript" src="/s/en_GB/3398/84f448c1067609161db7eeaf020f96b084eef29d.1/3/_/download/superbatch/js/batch.js" ></script>
+<!--[if lte IE 8]>
+<script data-atlassian-webresource-contents="com.atlassian.auiplugin:ajs[3.6.5]" type="text/javascript" src="/s/en_GB/3398/84f448c1067609161db7eeaf020f96b084eef29d.1/3/_/download/superbatch/js/batch.js?conditionalComment=lte+IE+8" ></script>
+<![endif]-->
+<script data-atlassian-webresource-contents="com.atlassian.confluence.plugins.view-storage-format:view-storage-menu-resources[4.3.7],com.atlassian.confluence.plugins.view-source:view-source-menu-resources[4.3.7],confluence.macros.core:flash-autosize[4.3.7],com.atlassian.confluence.plugins.share-page:mail-page-resources[1.26]" data-atlassian-webresource-contexts="page" type="text/javascript" src="/s/en_GB/3398/84f448c1067609161db7eeaf020f96b084eef29d.1/9ec81869a580c0aa5809243fa01caab5/_/download/contextbatch/js/page/batch.js" ></script>
+<script data-atlassian-webresource-contents="com.atlassian.confluence.plugins.confluence-inline-tasks:inline-tasks-resources[4.3.7],com.atlassian.confluence.plugins.confluence-inline-tasks:inline-tasks-styles[4.3.7],com.atlassian.confluence.plugins.drag-and-drop:drag-and-drop-for-view-content[4.3.7],com.atlassian.confluence.plugins.share-page:share-keyboard-shortcut-js-resources[1.26],com.atlassian.confluence.plugins.doctheme:splitter[4.3.7],com.atlassian.confluence.plugins.view-storage-format:view-comment-storage-resources[4.3.7],com.atlassian.confluence.plugins.confluence-like:content-like-resources[4.3.7],com.atlassian.confluence.plugins.jira.jira-connector:help-dialog-extension[1.4.2],confluence.web.resources:view-comment[1.0],com.atlassian.auiplugin:jquery-ui-other[3.6.5],com.atlassian.confluence.plugins.confluence-mentions-plugin:help-dialog-extension[1.5.9],com.atlassian.confluence.plugins.confluence-sortable-tables:sortable-table-resources[4.3.7],com.atlassian.confluence.plugins.drag-and-drop:support[4.3.7]" data-atlassian-webresource-contexts="viewcontent,main" type="text/javascript" src="/s/en_GB/3398/84f448c1067609161db7eeaf020f96b084eef29d.1/33dca755bf168968890c32ac7372f879/_/download/contextbatch/js/viewcontent,main/batch.js" ></script>
+<script data-atlassian-webresource-contents="com.atlassian.confluence.plugins.quickcomments:quick-comment-hide-traditional[4.3.7]" data-atlassian-webresource-contexts="atl.comments" type="text/javascript" src="/s/en_GB/3398/84f448c1067609161db7eeaf020f96b084eef29d.1/728f756c8ddf721072c53a140ddc49b8/_/download/contextbatch/js/atl.comments/batch.js" ></script>
+<script data-atlassian-webresource-contents="com.atlassian.confluence.plugins.quickcomments:quick-comment-page[4.3.7],com.atlassian.confluence.plugins.editor-loader:background-loading-editor[4.3.7],com.atlassian.confluence.plugins.quickcomments:quick-comment-initial[4.3.7]" data-atlassian-webresource-contexts="plugin.quick.comment.pre" type="text/javascript" src="/s/en_GB/3398/84f448c1067609161db7eeaf020f96b084eef29d.1/1e45cf05304df6c01096dbcdef74a819/_/download/contextbatch/js/plugin.quick.comment.pre/batch.js" ></script>
+<script data-atlassian-webresource-contents="com.atlassian.plugins.navigation-link-plugin:rotp-menu[1.2]" data-atlassian-webresource-contexts="atl.general" type="text/javascript" src="/s/en_GB/3398/84f448c1067609161db7eeaf020f96b084eef29d.1/776f06c5770b38eaf87009a3cf5dd462/_/download/contextbatch/js/atl.general/batch.js" ></script>
+<script data-atlassian-webresource-contents="com.atlassian.mywork.mywork-confluence-host-plugin:mw-header-anchor[1.1.10]" type="text/javascript" src="/s/en_GB/3398/84f448c1067609161db7eeaf020f96b084eef29d.1/1.1.10/_/download/batch/com.atlassian.mywork.mywork-confluence-host-plugin:mw-header-anchor/com.atlassian.mywork.mywork-confluence-host-plugin:mw-header-anchor.js" ></script>
+
+    
+    <!-- end system javascript resources -->
+    
+
+    
+                <link rel="canonical" href="http://localhost:8090/pages/viewpage.action?pageId=786434">
+        <link rel="shortlink" href="http://localhost:8090/x/AgAM">
+    <meta name="wikilink" content="[SEARCHBACKEND:검색백엔드개발팀 Home]">
+    <meta name="page-version" content="3">
+
+</head>
+    
+<body             onload="placeFocus()"
+     id="com-atlassian-confluence" class="theme-default ">
+
+        
+    <ul id="assistive-skip-links" class="assistive">
+    <li><a href="#title-heading">Skip to content</a></li>
+    <li><a href="#breadcrumbs">Skip to breadcrumbs</a></li>
+    <li><a href="#header-menu-bar">Skip to header menu</a></li>
+    <li><a href="#navigation">Skip to action menu</a></li>
+    <li><a href="#quick-search-query">Skip to quick search</a></li>
+</ul>
+<div id="page">
+<div id="full-height-container">
+    <div id="header-precursor">
+        <div class="cell">
+            
+                        </div>
+    </div>
+            <div id="header" class="">
+    <div class="cell">
+                          
+    <form id="quick-search" class="quick-search" method="get" action="/dosearchsite.action">
+        <fieldset>
+            <label class="assistive" for="quick-search-query">Quick Search</label>
+            <input id="quick-search-query" class="quick-search-query" type="search" accessKey="q" autocomplete="off" name="queryString" size="25" title="Quick Search" />
+            <input id="quick-search-submit" class="quick-search-submit" type="submit" value="Search" />
+            <div class="aui-dd-parent quick-nav-drop-down"></div>
+        </fieldset>
+        <div class="hidden parameters">
+                                        <!-- putMetadata failed to add value for key "quick-nav-enabled" so rendering metadata inline - see server debug log for details -->
+        <meta name="ajs-quick-nav-enabled" content="true">
+                                                    </div>
+    </form>
+        <ul id="header-menu-bar" class="ajs-menu-bar">
+                                                                
+            
+            <li class="normal ajs-menu-item">
+        <a id="browse-menu-link" class="browse trigger ajs-menu-title" href="#"><span><span>Browse</span></span></a>         <div class="assistive ajs-drop-down">
+                        <ul  id="browse-menu-link-leading"                 class="section-leading first">
+                                        <li>
+    
+        
+    
+    <a  id="space-pages-link" href="/pages/listpages.action?key=SEARCHBACKEND"  class=""   title="Browse pages in the 검색백엔드개발팀 space">
+                   <span>Pages</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a  id="space-blogposts-link" href="/pages/viewrecentblogposts.action?key=SEARCHBACKEND"  class=""   title="Browse blogs in the 검색백엔드개발팀 space">
+                   <span>Blog</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a  id="space-templates-link" href="/pages/templates2/listpagetemplates.action?key=SEARCHBACKEND"  class=""   title="Browse and edit templates in the 검색백엔드개발팀 space">
+                   <span>Templates</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a  id="space-labels-link" href="/labels/listlabels-heatmap.action?key=SEARCHBACKEND"  class=""   title="Browse labels in the 검색백엔드개발팀 space">
+                   <span>Labels</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a  id="space-attachments-link" href="/spaces/listattachmentsforspace.action?key=SEARCHBACKEND"  class=""   title="Browse attachments in the 검색백엔드개발팀 space">
+                   <span>Attachments</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a  id="space-mail-link" href="/mail/archive/viewmailarchive.action?key=SEARCHBACKEND"  class=""   title="Browse mail in the 검색백엔드개발팀 space">
+                   <span>Mail</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a  id="space-advanced-link" href="/spaces/viewspacesummary.action?key=SEARCHBACKEND"  class=""   title="Browse additional space functions in the 검색백엔드개발팀 space">
+                   <span>Advanced</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a  id="space-admin-link" href="/spaces/editspace.action?key=SEARCHBACKEND"  class=""   title="Administer the 검색백엔드개발팀 space">
+                   <span>Space Admin</span></a>        </li>
+                            </ul>
+                        <ul  id="browse-menu-link-global"                 class="section-global">
+                                        <li>
+    
+        
+    
+    <a  id="whats-new-menu-link" href="http://docs.atlassian.com/confluence/docs-43/whatsnew/iframe"  class=""   title="">
+                   <span>What’s New</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a  id="people-directory-link" href="/peopledirectory.action"  class=""   title="Browse the Confluence people directory">
+                   <span>People Directory</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a  id="space-directory-link" href="/spacedirectory/view.action"  class=""   title="Browse the Confluence space directory">
+                   <span>Space Directory</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a  id="feed-builder-link" href="/dashboard/configurerssfeed.action"  class=""   title="Create your custom RSS feed.">
+                   <span>Feed Builder</span></a>        </li>
+                                        <li>
+    
+            
+    
+    <a  id="keyboard-shortcuts-link" href="#"  class=""   title="View available keyboard shortcuts">
+                   <span>Keyboard Shortcuts</span></a>        </li>
+                                        <li>
+    
+            
+    
+    <a  id="gadget-directory-link" href="#"  class="user-item administration-link"   title="Browse gadgets provided by Confluence">
+                   <span>Confluence Gadgets</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a  id="administration-link" href="/admin/console.action"  class="user-item administration-link"   title="Manage and maintain Confluence">
+                   <span>Confluence Admin</span></a>        </li>
+                            </ul>
+                    </div>
+    </li>
+            
+                                                                        
+            <li class="normal ajs-menu-item">
+        <a id="user-menu-link" class="user trigger ajs-menu-title" href="#"><span><span>simon</span></span></a>         <div class="assistive ajs-drop-down">
+                        <ul  id="user-menu-link-user-status"                 class="section-user-status first">
+                                        <li>
+        
+        
+    
+    <a  id="set-user-status-link" href="/display/~admin"  class="user-item update-user-status"   title="Update your status">
+                   <span>Update Status&hellip;</span></a>        </li>
+                            </ul>
+                        <ul  id="user-menu-link-user-preferences"                 class="section-user-preferences">
+                                        <li>
+    
+        
+    
+    <a  id="create-personal-space-link" href="/spaces/createpersonalspace.action"  class="user-item personal-space"   title="">
+                   <span>Add Personal Space&hellip;</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a  id="view-user-history-link" href="/users/viewuserhistory.action"  class="user-item user-history popup-link"   title="">
+                   <span>Recently Viewed</span></a>        </li>
+                            </ul>
+                        <ul  id="user-menu-link-user-content"                 class="section-user-content">
+                                        <li>
+    
+        
+    
+    <a  id="view-user-profile-link" href="/users/viewmyprofile.action"  class="user-item user-profile"   title="">
+                   <span>Profile</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a  href="/users/viewfollow.action?username=admin"  class="follow-link"   title="">
+                   <span>Network</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a  href="/display/status/admin/list"  class="user-item list-user-status"   title="">
+                   <span>Status Updates</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a  id="user-favourites-link" href="/users/viewmyfavourites.action"  class="user-item"   title="">
+                   <span>Favourites</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a  id="user-watches-link" href="/users/viewnotifications.action"  class="user-item"   title="">
+                   <span>Watches</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a  id="user-drafts-link" href="/users/viewmydrafts.action"  class="user-item"   title="">
+                   <span>Drafts</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a  id="user-settings-link" href="/users/viewmysettings.action"  class="user-item"   title="">
+                   <span>Settings</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a  id="upm-requests-link" href="/plugins/servlet/upm/requests"  class=""   title="">
+                   <span>Atlassian Marketplace</span></a>        </li>
+                            </ul>
+                        <ul  id="user-menu-link-user-operations"                 class="section-user-operations">
+                                        <li>
+    
+        
+    
+    <a  id="logout-link" href="/logout.action"  class="user-item logout-link"   title="">
+                   <span>Log Out</span></a>        </li>
+                            </ul>
+                    </div>
+    </li>
+                        </ul>
+        
+    
+    <ol id="breadcrumbs">
+                    
+                        
+        <li class="first" >
+                                    <span><a href="/dashboard.action" title="Go to Dashboard">Dashboard</a></span>
+                </li>
+                    
+                
+        <li>
+                                    <span><a href="/display/SEARCHBACKEND">검색백엔드개발팀</a></span>
+                </li>
+                    
+                
+        <li>
+                                    <span><a href="/pages/viewpage.action?pageId=786434">검색백엔드개발팀 Home</a></span>
+                </li>
+        </ol>
+
+    </div>
+</div>
+<!-- \#header -->    
+        <!-- \#header -->
+
+        
+    <div id="main" class="">
+        <div id="main-header">
+            
+    <div id="navigation" class="content-navigation view">
+                    <ul class="ajs-menu-bar">
+                                <li class="ajs-button normal">
+    
+        
+    
+    <a  id="editPageLink" href="/pages/editpage.action?pageId=786434"  class="edit"  accessKey="e"  title="Edit">
+                   <span><u>E</u>dit</span></a>        </li>
+                    
+            <li class="normal ajs-menu-item">
+        <a id="add-menu-link" class="add trigger ajs-menu-title" href="#"><span><span>Add</span></span></a>         <div class="assistive ajs-drop-down">
+                        <ul  id="add-menu-link-space"                 class="section-space first">
+                                        <li>
+    
+        
+    
+    <a  id="createPageLink" href="/pages/createpage.action?spaceKey=SEARCHBACKEND&amp;fromPageId=786434"  class="add-page"  accessKey="p"  title="Add a Page">
+                   <span>Page</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a  id="createBlogpostLink" href="/pages/createblogpost.action?spaceKey=SEARCHBACKEND"  class="add-news"   title="Add a Blog Post">
+                   <span>Blog Post</span></a>        </li>
+                            </ul>
+                        <ul  id="add-menu-link-page"                 class="section-page">
+                                        <li>
+    
+        
+    
+    <a  id="add-comment-menu-link" href="/pages/viewpage.action?pageId=786434&amp;showComments=true&amp;showCommentArea=true#addcomment"  class="add-comment"   title="Add a Comment">
+                   <span>Comment</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a  id="add-attachment-link" href="/pages/viewpageattachments.action?pageId=786434"  class="add-attachment"  accessKey="a"  title="Add an Attachment">
+                   <span>Attachment</span></a>        </li>
+                            </ul>
+                    </div>
+    </li>
+                    
+            <li class="normal ajs-menu-item">
+        <a id="action-menu-link" class="action trigger ajs-menu-title" href="#"><span><span>Tools</span></span></a>         <div class="assistive ajs-drop-down">
+                        <ul  id="action-menu-link-primary"                 class="section-primary first">
+                                        <li>
+    
+        
+    
+    <a  id="view-attachments-link" href="/pages/viewpageattachments.action?pageId=786434"  class="action-view-attachments"  accessKey="a"  title="View Attachments">
+                   <span><u>A</u>ttachments (0)</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a  id="action-view-history-link" href="/pages/viewpreviousversions.action?pageId=786434"  class="action-view-history"   title="">
+                   <span>Page History</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a  id="action-page-permissions-link" href="/pages/viewinfo.action?pageId=786434"  class="action-page-permissions"   title="Edit restrictions">
+                   <span>Restrictions</span></a>        </li>
+                            </ul>
+                        <ul  id="action-menu-link-marker"                 class="section-marker">
+                                        <li>
+    
+        
+    
+    <a  id="page-favourite" href="/labels/addfavourite.action?entityId=786434&amp;atl_token=703a8f45a827737f5a2d09db257503b4a0e2abaf"  class="action-page-favourite"   title="">
+                   <span>Favourite</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a  id="page-unwatch" href="/pages/removepagenotification.action?pageId=786434&amp;atl_token=703a8f45a827737f5a2d09db257503b4a0e2abaf"  class="action-page-watching selected ie-page-watching-selected"   title="">
+                   <span>Stop Watching</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a  id="page-watch" href="/pages/addpagenotification.action?pageId=786434&amp;atl_token=703a8f45a827737f5a2d09db257503b4a0e2abaf"  class="action-page-watching inactive"   title="">
+                   <span>Watch</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a  id="manage-watchers-menu-item" href="/pages/managepagenotifications.action?pageId=786434"  class="action-manage-watchers"   title="Manage page watchers">
+                   <span>Manage Watchers</span></a>        </li>
+                            </ul>
+                        <ul  id="action-menu-link-secondary"                 class="section-secondary">
+                                        <li>
+    
+        
+    
+    <a  id="view-page-info-link" href="/pages/viewinfo.action?pageId=786434"  class="action-view-info"   title="">
+                   <span>Info</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a  id="link-to-page-link" href="/pages/viewinfo.action?pageId=786434"  class=""   title="Link to this Page">
+                   <span>Link to this Page&hellip;</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a  id="view-in-hierarchy-link" href="/pages/listpages-dirview.action?key=SEARCHBACKEND&amp;openId=786434#selectedPageInHierarchy"  class=""   title="">
+                   <span>View in Hierarchy</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a  id="action-view-source-link" href="/plugins/viewsource/viewpagesrc.action?pageId=786434"  class="action-view-source popup-link"   title="">
+                   <span>View Source</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a  id="action-view-storage-link" href="/plugins/viewstorage/viewpagestorage.action?pageId=786434"  class="action-view-storage view-storage-link popup-link"   title="">
+                   <span>View Storage Format</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a  id="action-export-pdf-link" href="/spaces/flyingpdf/pdfpageexport.action?pageId=786434"  class=""   title="">
+                   <span>Export to PDF</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a  id="action-export-word-link" href="/exportword?pageId=786434"  class="action-export-word"   title="">
+                   <span>Export to Word</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a  id="import-word-doc" href="/pages/worddav/uploadimport.action?pageId=786434"  class=""   title="">
+                   <span>Import Word Document</span></a>        </li>
+                            </ul>
+                        <ul  id="action-menu-link-modify"                 class="section-modify">
+                                        <li>
+    
+        
+    
+    <a  id="action-copy-page-link" href="/pages/copypage.action?idOfPageToCopy=786434&amp;spaceKey=SEARCHBACKEND"  class="action-copy"   title="">
+                   <span>Copy</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a  id="action-move-page-dialog-link" href="/pages/viewpage.action?pageId=786434"  class="action-move"   title="">
+                   <span>Move</span></a>        </li>
+                                        <li>
+    
+        
+    
+    <a  id="action-remove-content-link" href="/pages/removepage.action?pageId=786434"  class="action-remove"   title="">
+                   <span>Remove</span></a>        </li>
+                            </ul>
+                    </div>
+    </li>
+            </ul>
+    </div>
+
+            
+            <h1 id="title-heading" class="pagetitle">
+                                    <a href="/display/SEARCHBACKEND"><img class="logo global" src="/images/logo/confluence_48_trans.png" alt=""></a>                
+                <span id="title-text">
+                                                <a href="/pages/viewpage.action?pageId=786434">검색백엔드개발팀 Home</a>
+                                    </span>
+            </h1>
+        </div><!-- \#main-header -->
+
+        
+
+        <div id="sidebar-container">
+                                                </div><!-- \#sidebar-container -->
+
+        
+    
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+
+
+
+
+        
+
+    
+    
+        
+    
+    
+                    
+    
+
+    
+
+
+<div id="content" class="page view">
+    
+
+<div id="action-messages">
+                        </div>
+
+
+
+    
+<script type="text/x-template" title="movePageDialog">
+    <div class="row information">
+        <div class="inner">
+            <div class="element">
+                Specify the new parent page for this page and its children by space and title.
+            </div>
+        </div>
+    </div>
+    <div class="form">
+        <fieldset>
+                
+
+    <legend class="assistive"><span>Change the Parent Page to a Known Page</span></legend>
+            <div class="row">
+                <label for="new-space">New space:</label>
+                <div class="value new-space-value">
+                    <input id="new-space-key" name="new-space-key" type="hidden" value="SEARCHBACKEND">
+                                            <span class="space-input">
+                            <input id="new-space" name="new-space" value="검색백엔드개발팀">
+                        </span>
+                        <span class="description hidden">Start typing a space name to see a list of suggestions.</span>
+                                        <div class="new-space-dropdown aui-dd-parent autocomplete"></div>
+                </div>
+            </div>
+            <div class="row">
+                <label for="new-parent-page">New parent page:</label>
+                <div class="value new-parent-page-value">
+                    <span class="page-input">
+                        <input id="new-parent-page" name="new-parent-page" value="">
+                    </span>
+                    <span class="description">Start typing a page title to see a list of suggestions.</span>
+                    <div class="new-parent-page-dropdown aui-dd-parent autocomplete"></div>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+    <div class="location-info">
+        <div class="row">
+            <label>Current location:</label>
+            <div class="value breadcrumbs-container">
+                <div class="breadcrumbs-line">
+                    <ul id="current-parent-breadcrumbs" class="breadcrumbs">
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <label>New location:</label>
+            <div class="value breadcrumbs-container">
+                <div class="breadcrumbs-line">
+                    <ul id="new-parent-breadcrumbs" class="breadcrumbs">
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+
+<script type="text/x-template" title="movePageSearchPanel">
+    <div class="row information">
+        <div class="inner">
+            <div class="element">
+                Search for and select the new parent page for this page and its children.
+            </div>
+        </div>
+    </div>
+    <div id="move-page-search-container" class="row">
+        <div class="search-form">
+            <fieldset>
+                    
+
+    <legend class="assistive"><span>Search for a New Parent Page</span></legend>
+                    
+
+    <label  for="move-page-search-query" class="assistive">Search keywords</label>
+                <input class="search-query" id="move-page-search-query">
+                    
+
+    <label  for="move-page-search-space" class="assistive">Search in space</label>
+                                    <select id="move-page-search-space" class="search-space">
+                        <option value="conf_all" selected="selected">All Spaces</option>
+                        <option value="SEARCHBACKEND">검색백엔드개발팀</option>
+                    </select>
+                                <input type="button" value="Search">
+                            </fieldset>
+        </div>
+        <div class="search-results">
+        </div>
+    </div>
+</script>
+<script type="text/x-template" title="searchResultsGrid">
+    <table>
+        <thead>
+            <tr class="header">
+                <th class="search-result-title">Page Title</th>
+                <th class="search-result-space">Space</th>
+                <th class="search-result-date">Updated</th>
+            </tr>
+        </thead>
+    </table>
+</script>
+<script type="text/x-template" title="searchResultsGridCount">
+    <p class="search-result-count">{0}</p>
+</script>
+<script type="text/x-template" title="searchResultsGridRow">
+    <tr class="search-result">
+        <th class="search-result-title"><a href="{1}" class="content-type-{2}"><span>{0}</span></a></th>
+        <td class="search-result-space"><a class="space" href="/display/{4}/" title="{3}">{3}</a></td>
+        <td class="search-result-date"><span class="date" title="{6}">{5}</span></td>
+    </tr>
+</script><!-- Start restrictions section -->
+<script type="text/x-template" title="page-permissions-div">
+<div id="page-permissions-div">
+    <div id="page-permissions-editor-form">
+
+                <div id="page-permissions-error-div" class="hidden">
+            <a href="#" id="permissions-error-div-close">Ok</a>
+            <div></div>
+        </div>
+
+                <div id="page-permissions-type-radios" class="page-permissions-label-rows">
+            <div>
+                <input id="restrictViewRadio" type="radio" checked="checked" name="pagePermissionTypeRadio" value="view"/>
+                <label for="restrictViewRadio">Restrict viewing of this page</label>
+                <input id="restrictEditRadio" type="radio" name="pagePermissionTypeRadio" value="edit"/>
+                <label for="restrictEditRadio">Restrict editing of this page</label>
+            </div>
+        </div>
+        <div id="page-permissions-input" class="page-permissions-label-rows">
+            <div class="page-permissions-label">To:</div>
+            <div id="page-permissions-chooser-box">
+                                    <span id="page-permissions-choose-me" class="ajs-button normal">
+                        <img class="permission-entity-picture" src="/images/icons/profilepics/default.gif" border="0" alt="Me" align="absmiddle"/>
+                        <a href="#">Me</a>
+                        <span class="remote-user-name hidden">admin</span>
+                    </span>
+                                <span id="page-permissions-choose-user" class="ajs-button">
+                    
+
+
+
+    
+
+
+
+<a href="#" id='userpicker-popup-link-image' onClick="var picker = window.open('/spaces/openuserpicker.action?key=SEARCHBACKEND&amp;startIndex=0&amp;onPopupSubmit=AJS.PagePermissions.addUserPermissions', 'EntitiesPicker', 'status=yes,resizable=yes,top=100,left=200,width=700,height=680,scrollbars=yes'); picker.focus(); return false;"><img src="/s/en_GB/3398/84f448c1067609161db7eeaf020f96b084eef29d.1/_/images/icons/user_16.gif" height=16 width=16 border=0 align="absmiddle"  title="Choose users" /></a>
+<a href="#" id='userpicker-popup-link-text' onClick="var picker = window.open('/spaces/openuserpicker.action?key=SEARCHBACKEND&amp;startIndex=0&amp;onPopupSubmit=AJS.PagePermissions.addUserPermissions', 'EntitiesPicker', 'status=yes,resizable=yes,top=100,left=200,width=700,height=680,scrollbars=yes'); picker.focus(); return false;">Person...</a>
+
+
+                </span>
+                <span id="page-permissions-choose-group" class="ajs-button">
+                    
+
+
+
+    
+
+ 
+
+<a href="#" id='grouppicker-popup-link-image' onClick="var picker = window.open('/spaces/opengrouppicker.action?key=SEARCHBACKEND&amp;startIndex=0&amp;actionName=dosearchgroups.action&amp;onPopupSubmit=AJS.PagePermissions.addGroupPermissions', 'EntitiesPicker', 'status=yes,resizable=yes,top=100,left=200,width=580,height=550,scrollbars=yes'); picker.focus(); return false;"><img src="/s/en_GB/3398/84f448c1067609161db7eeaf020f96b084eef29d.1/_/images/icons/group_16.gif" height=16 width=16 border=0 align="absmiddle"  title="Choose groups" /></a>
+<a href="#" id='grouppicker-popup-link-text' onClick="var picker = window.open('/spaces/opengrouppicker.action?key=SEARCHBACKEND&amp;startIndex=0&amp;actionName=dosearchgroups.action&amp;onPopupSubmit=AJS.PagePermissions.addGroupPermissions', 'EntitiesPicker', 'status=yes,resizable=yes,top=100,left=200,width=580,height=550,scrollbars=yes'); picker.focus(); return false;">Group...</a>
+
+
+                </span>
+            </div>
+            <div id="page-permissions-input-box">
+                <input type="text" id="page-permissions-names-input" name="permissionNames"
+                    placeholder="Enter user or group name" class="autocomplete-user"
+                    data-max="10" data-none-message="No matches"
+                    data-target="#page-permissions-names-hidden" data-template="{username}"
+                    data-dropdown-target="#page-perms-name-dropdown-wrapper" data-resize-to-input="true"
+                    size="30"/>
+                <input
+    type="hidden"
+                            id="page-permissions-names-hidden"           />                <img height="16px" width="1px" src="/s/en_GB/3398/84f448c1067609161db7eeaf020f96b084eef29d.1/_/images/border/spacer.gif"/>
+                <input type="button" id="add-typed-names" value="Restrict">
+                <div id="page-perms-name-dropdown-wrapper" class="aui-dd-parent autocomplete"></div>
+            </div>
+        </div>
+    </div>
+    <div id="page-permissions-tables">
+        <div id="page-permissions-table-div">
+                        <table id="page-permissions-table" class="page-permissions-table">
+                <tr id="page-permissions-no-views" class="marker-row">
+                    <td colspan="3" class="page-permissions-marker-cell"><span>No view restrictions are defined for this page</span></td>
+                </tr>
+                <tr id="page-permissions-no-edits" class="marker-row">
+                    <td colspan="3" class="page-permissions-marker-cell"><span>No edit restrictions are defined for this page</span></td>
+                </tr>
+            </table>
+        </div>
+        <div id="page-inherited-permissions-table-div" class="hidden">
+            <span id="page-inherited-permissions-table-desc">
+                <a class="icon twisty-closed">Show/Hide</a>
+                <a id="toggle-inherited-permissions" title="Click to see inherited restrictions">This page has restricted parent pages. It can only be seen by users who can see those parent pages.</a>
+            </span>
+            <div id="page-inherited-permissions-tables" class="hidden page-inheritance-togglable"></div>
+        </div>
+    </div>
+</div>
+</script>
+
+<!-- End restrictions section -->
+
+        
+    
+    
+        
+                            
+    
+
+                    
+
+        
+        <a href="#page-metadata-end" class="assistive">Skip to end of metadata</a>
+<div id="page-metadata-start" class="assistive"></div>
+
+    <div class="page-metadata">
+        <ul>
+                            <li class="page-metadata-item noprint">
+    
+            
+    
+    <a  id="content-metadata-page-restrictions" href="#"  class="page-metadata-icon page-restrictions hidden"   title="Page restrictions apply. Click the lock icon to view or edit the restriction.">
+                   <span>Page restrictions apply</span></a>        </li>
+                        <li class="page-metadata-modification-info">
+                                    Added by <a href="/display/~admin"
+                          class="url fn confluence-userlink" data-username="admin"
+                   >simon</a>, last edited by <a href="/display/~admin"
+                          class="url fn confluence-userlink" data-username="admin"
+                   >simon</a> on Nov 30, 2013
+                                                                <span class="noprint">&nbsp;(<a id="view-change-link" href="/pages/diffpages.action?pageId=786434&originalId=786443">view change</a>)</span>
+                                                </li>
+                    </ul>
+                </div>
+
+
+<a href="#page-metadata-start" class="assistive">Go to start of metadata</a>
+<div id="page-metadata-end" class="assistive"></div>
+        
+                                
+        <div id="main-content" class="wiki-content">
+                           <p>메인 컨텐츠</p><p> </p>
+    
+        </div>
+
+        <!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+         <rdf:Description
+    rdf:about="http://localhost:8090/pages/viewpage.action?pageId=786434"
+    dc:identifier="http://localhost:8090/pages/viewpage.action?pageId=786434"
+    dc:title="검색백엔드개발팀 Home"
+    trackback:ping="http://localhost:8090/rpc/trackback/786434"/>
+</rdf:RDF>
+-->
+
+                    <script type="text/x-template" title="labels-dialog-div">
+        <div id="labels-dialog">
+        <div class="labels-editor">
+            <form method="GET" action="" id="add-labels-form">
+                <div id="labelOperationErrorContainer">
+                    <span class="error"><span class="errorMessage" id="labelOperationErrorMessage"></span></span>
+                </div>
+    
+                <div id="label-input-fields">
+                    <input autocomplete="off" id="labelsString" name="labelsString" value="">
+                    <input id="add-labels-editor-button" type="submit" class="add-labels" value="Add">
+                </div>
+                <div id="labelsAutocompleteList" class="aui-dd-parent resize-to-input" style="width: 417px"></div>
+                <div id="dialog-label-list">
+                    <!-- DIV placeholder for labels list, is copied into in labels-dialog.js -->
+                </div>
+                <div id="waitImageAndStatus">
+                    <img class="waiting" alt="Please wait" src="/s/en_GB/3398/84f448c1067609161db7eeaf020f96b084eef29d.1/_/images/icons/wait.gif">&nbsp;
+                    <span id="labelOperationStatus" class="smalltext"></span>
+                </div>
+                <div class="labels-tip"></div>
+            </form>
+        </div>
+        <div style="display: none;">
+            <div class="labels-section-content content-column"
+    	    		entityid="786434" entitytype="Page"
+    		>
+	<div class="labels-content">
+		
+
+<ul class="label-list">
+    <li class="no-labels-message-container">
+        <span id="labels-section-title-none" class="no-labels-message">
+            None
+        </span>
+    </li>
+                <li class="labels-edit-container"><a href="#" class="show-labels-editor editor-icon" title="Edit Labels">
+            <span class="icon icon-edit">Edit Labels</span>
+        </a></li>
+    </ul>
+    </div>
+</div>        </div>
+    </div>
+</script>
+                
+    
+
+
+<div id="labels-section" class="pageSection group">
+    <div class="labels-editor">
+        <span id="labels-section-title" class="label-title">Labels</span>
+        <div class="labels-section-content content-column"
+    	    		entityid="786434" entitytype="Page"
+    		>
+	<div class="labels-content">
+		
+
+<ul class="label-list">
+    <li class="no-labels-message-container">
+        <span id="labels-section-title-none" class="no-labels-message">
+            None
+        </span>
+    </li>
+                <li class="labels-edit-container"><a href="#" class="show-labels-editor editor-icon" title="Edit Labels">
+            <span class="icon icon-edit">Edit Labels</span>
+        </a></li>
+    </ul>
+    </div>
+</div>    </div>
+</div>
+        
+                    <div id="children-section" class="pageSection children-showing group">
+                
+        <div class="section-header ">
+            <h2 id="children-section-title" class="section-title">
+                <a href="/pages/viewpage.action?pageId=786434&amp;showChildren=false#children" class="children-show-hide">
+                                            3 Child Pages
+                                    </a>
+            </h2>
+
+            <a href="/pages/viewpage.action?pageId=786434&amp;showChildren=false#children" class="children-show-hide icon"></a>
+            <!--
+            <span class="noprint grey">
+                <a class="children-subtitle" href="/pages/listpages-dirview.action?key=SEARCHBACKEND&amp;openId=786434#selectedPageInHierarchy">Reorder Pages</a>
+                                    &nbsp;|&nbsp;
+                    <a class="children-subtitle" href="/pages/createpage.action?spaceKey=SEARCHBACKEND&amp;fromPageId=786434">
+                        Add Child Page
+                    </a>
+                            </span>
+            -->
+        </div>
+        <div id="page-children" class="pageSectionBody children-loaded">
+                                        <span class="child-display">
+                                 <span class="icon icon-page" title="Page">Page:</span>                 <a href="/pages/viewpage.action?pageId=786436">테스트 페이지 1</a>
+                         </span>
+                            <span class="child-display">
+                                 <span class="icon icon-page" title="Page">Page:</span>                 <a href="/pages/viewpage.action?pageId=786438">테스트 페이지 2</a>
+                         </span>
+                            <span class="child-display">
+                                 <span class="icon icon-page" title="Page">Page:</span>                 <a href="/pages/viewpage.action?pageId=786440">테스트 페이지 3</a>
+                         </span>
+                                </div>
+        </div>
+    
+            
+
+
+
+
+            
+    
+
+
+
+
+
+
+
+
+                    
+    
+<div id="comments-section" class="pageSection group">
+    
+    
+    
+    
+            <div class="bottom-comment-panels comment-panels">
+                                    
+    
+
+
+    
+
+<div class="quick-comment-container comment add"><p class="comment-user-logo"><a class="userLogoLink" data-username="admin" href="/users/editmyprofilepicture.action" title="Add a picture of yourself"><img class="userLogo logo defaultLogo" src="/s/en_GB/3398/84f448c1067609161db7eeaf020f96b084eef29d.1/_/images/icons/profilepics/add_profile_pic.png" alt="User icon: Add a picture of yourself"></a></p><div class="quick-comment-vertical-spacer"></div><div class="quick-comment-body"><div class="quick-comment-loading-container" style="display:none;"><p class="quick-comment-loading-message">Loading the Editor</p></div><form style="display:block;" class="quick-comment-form" method="post" name="inlinecommentform" action="/pages/doaddcomment.action?pageId=786434" ><div title="Add a Comment" class="quick-comment-prompt"><span>Write a comment…</span></div></form></div></div>
+
+            </div>
+    
+                        <div id="comments-actions" class="aui-toolbar noprint">
+                <p class="toolbar-group">
+                    <span class="toolbar-item"><a href="/pages/viewpage.action?pageId=786434&showComments=true&amp;showCommentArea=true#addcomment" id="add-comment-rte" accesskey="m" class="toolbar-trigger">Add Comment</a></span>
+                </p>
+            </div>
+            </div>
+
+
+            
+</div>
+
+
+    
+
+
+
+    
+    
+
+    
+    
+    
+
+
+            
+    
+
+
+        <br class="clear">
+    </div><!-- \#main -->
+    
+    
+        
+            <div id="footer">
+                                                <p class="license license-eval">
+                  <strong> EVALUATION LICENSE </strong>
+                                      Are you enjoying Confluence? Please consider <a href="http://www.atlassian.com/c/12520/buy-new">purchasing it</a> today.
+                                  </p>
+                        
+    <ul id="poweredby">
+        <li class="noprint">Powered by <a href="http://www.atlassian.com/software/confluence" class="hover-footer-link">Atlassian Confluence</a> <span id='footer-build-information'>4.3.7</span>, the <a href="http://www.atlassian.com/software/confluence/tour/enterprise-wiki.jsp" class="hover-footer-link">Enterprise Wiki</a></li>
+        <li class="print-only">Printed by Atlassian Confluence 4.3.7, the Enterprise Wiki.</li>        
+        <li class="noprint"> &nbsp;&middot;&nbsp; <a href="http://jira.atlassian.com/secure/BrowseProject.jspa?id=10470" class="hover-footer-link">Report a bug</a></li>
+        <li class="noprint"> &nbsp;&middot;&nbsp; <a href="http://www.atlassian.com/about/connected.jsp?s_kwcid=Confluence-stayintouch" class="hover-footer-link">Atlassian News</a></li>
+    </ul>
+
+            
+    </div>
+    
+</div><!-- \#full-height-container -->
+</div><!-- \#page -->
+</body>
+</html>
